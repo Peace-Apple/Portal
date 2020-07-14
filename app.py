@@ -34,11 +34,11 @@ def add_item():
         new_item = {
             "name": request.form['name'],
             "unit_price":request.form['price'],
-            "date_created": datetime.utcnow()
+            "date_created": str(datetime.utcnow())
         }
         items.append(new_item)
 
-        msg = Message('A new shop item has been added', sender='astonreba@gmail.com', recipients=['martinkatamba@akorion.com'])
+        msg = Message('A new shop item has been added', sender='astonreba@gmail.com', recipients=['emmanuelomech@gmail.com'])
         msg.body = str(new_item)
         mail.send(msg)
 
