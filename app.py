@@ -15,7 +15,7 @@ items = [
     {
         "name": "Apples",
         "unit_price": 100,
-        "date_created": "12/07/2020"
+        "date_created": datetime.utcnow()
     },
     {
         "name": "Mangoes",
