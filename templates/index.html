@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head %}
+
+{% endblock%}
+
+{% block body %}
+<h1>Shop Items</h1>
+{% for item in items %}
+<table>
+    <tr>
+        <th>Name</th>
+    <th>Price</th>
+    <th>Date Created</th>
+    </tr>
+    <tr>
+        <td>{{ item.name }}</td>
+    <td>{{ item.unit_price }}</td>
+    <td>{{ item.date_created }}</td>
+    </tr>
+    <hr>
+</table>
+
+{% endfor %}
+
+{% endblock%}
