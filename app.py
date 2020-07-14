@@ -3,6 +3,12 @@ from flask_mail import Mail, Message
 from datetime import datetime
 
 app = Flask(__name__)
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'astonreba@gmail.com'
+app.config['MAIL_PASSWORD'] = 'oqegkrodmxvajxah'
+app.config['MAIL_USE_SSL'] = True
+
 mail = Mail(app)
 
 items = [
@@ -32,9 +38,9 @@ def add_item():
         }
         items.append(new_item)
 
-        # msg = Message('A new shop item has been added', sender='astonreba@gmail.com', recipients=['markkatamba@akorion.com'])
-        # msg.body = new_item
-        # mail.send(msg)
+        msg = Message('A new shop item has been added', sender='astonreba@gmail.com', recipients=['martinkatamba@akorion.com'])
+        msg.body = str(new_item)
+        mail.send(msg)
 
         return redirect('/')
     else:
