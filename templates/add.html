@@ -6,7 +6,8 @@
 {% block body %}
     <div class="ui container">
         <h1 style="margin-top: 30px;">Add Item</h1>
-        <form class="ui form" action="/add" method="POST">
+        <a class="ui button green" href="/">View Items</a>
+        <form class="ui form" action="/add" method="POST" style="margin-top: 20px;">
             <input type="text" name="name" id="name" placeholder="Enter name">
             <br><br>
             <input type="text" name="price" id="price" placeholder="Enter price">
