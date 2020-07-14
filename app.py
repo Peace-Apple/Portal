@@ -38,7 +38,7 @@ def add_item():
         }
         items.append(new_item)
 
-        msg = Message('A new shop item has been added', sender='astonreba@gmail.com', recipients=['astonreba@gmail.com'])
+        msg = Message('A new shop item has been added', sender='astonreba@gmail.com', recipients=['martinkatamba@akorion.com'])
         msg.body = str(new_item)
         mail.send(msg)
 
