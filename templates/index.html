@@ -4,22 +4,25 @@
 {% endblock%}
 
 {% block body %}
-<h1>Shop Items</h1>
-{% for item in items %}
-<table>
-    <tr>
-        <th>Name</th>
-    <th>Price</th>
-    <th>Date Created</th>
-    </tr>
-    <tr>
-        <td>{{ item.name }}</td>
-    <td>{{ item.unit_price }}</td>
-    <td>{{ item.date_created }}</td>
-    </tr>
-    <hr>
-</table>
+<div class="ui container">
+    <h1 style="margin-top: 30px;">Shop Items</h1>
+    <a class="ui button blue" href="/add">Add Item</a>
+    {% for item in items %}
+    <table class="ui segment" style="width: 100%; text-align:left">
+        <tr>
+            <th>Name</th>
+        <th >Price</th>
+        <th>Date Created</th>
+        </tr>
+        <tr>
+            <td>{{ item.name }}</td>
+        <td>{{ item.unit_price }}</td>
+        <td>{{ item.date_created }}</td>
+        </tr>
+        <hr>
+    </table>
 
-{% endfor %}
+    {% endfor %}
+</div>
 
 {% endblock%}
